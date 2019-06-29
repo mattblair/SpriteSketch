@@ -1,0 +1,96 @@
+# based on:
+# https://github.com/github/gitignore/blob/master/Objective-C.gitignore
+# and 
+# https://github.com/github/gitignore/blob/master/Global/OSX.gitignore
+# and
+# https://github.com/github/gitignore/blob/master/Swift.gitignore
+
+# Add project-specific ignores here, for example:
+
+
+# OS X-related
+
+.DS_Store
+profile
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+
+# Xcode
+
+*/build/*
+
+# shouldn't be any nibs...
+
+*~.nib/
+
+*.mobileprovision
+
+# project-related
+
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+
+# Workspace-related
+xcuserdata
+
+# this is in github's recommendation, but I don't think I've seen it in the wild
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+
+DerivedData
+.idea/
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Swift Package Manager
+#
+# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
+# Packages/
+# Package.pins
+# Package.resolved
+.build/
+
+# include Pods.xcproj, but not the actual pods
+# To install dependencies, install Cocoapods (http://cocoapods.org) and then run:
+# pod install
+# More info:
+# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
+Pods/
+!Pods/Pods.xcproj
+
+# Carthage
+#
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+# Carthage/Checkouts
+
+Carthage/Build
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/#source-control
+
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output

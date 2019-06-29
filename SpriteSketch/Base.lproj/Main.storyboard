@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.15"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sketch View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SketchViewController" customModule="SpriteSketch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdf-pg-P1J" customClass="PKCanvasView">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9X-J0-liS">
+                                <rect key="frame" x="20" y="20" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="handleSaveTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6lh-tL-zwT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c1U-Ia-Vll">
+                                <rect key="frame" x="959" y="20" width="45" height="30"/>
+                                <state key="normal" title="Export"/>
+                                <connections>
+                                    <action selector="handleExportTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8n6-oE-WNo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="c1U-Ia-Vll" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="E9X-J0-liS" secondAttribute="trailing" constant="8" symbolic="YES" id="MTo-JJ-Wrq"/>
+                            <constraint firstItem="c1U-Ia-Vll" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Ode-WA-uJx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c1U-Ia-Vll" secondAttribute="trailing" constant="20" id="S6t-W6-JuN"/>
+                            <constraint firstItem="hdf-pg-P1J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UAV-hO-3bu"/>
+                            <constraint firstItem="E9X-J0-liS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ULN-xo-CTn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hdf-pg-P1J" secondAttribute="trailing" id="i66-fb-9Mt"/>
+                            <constraint firstItem="E9X-J0-liS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="s2l-xy-Pbn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hdf-pg-P1J" secondAttribute="bottom" id="sZQ-f2-y6Z"/>
+                            <constraint firstItem="c1U-Ia-Vll" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="wn5-73-aos"/>
+                            <constraint firstItem="hdf-pg-P1J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yPt-jF-Cld"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="canvasView" destination="hdf-pg-P1J" id="ng2-zQ-spY"/>
+                        <outlet property="exportButton" destination="c1U-Ia-Vll" id="vgb-5W-XNj"/>
+                        <outlet property="saveButton" destination="E9X-J0-liS" id="Zdz-5u-GRo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304" y="85"/>
+        </scene>
+    </scenes>
+</document>
