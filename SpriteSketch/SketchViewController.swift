@@ -20,6 +20,7 @@ class SketchViewController: UIViewController, PKCanvasViewDelegate,
     var dragStartPoint: CGPoint?
     var dragEndPoint: CGPoint?
     var selectedRect: CGRect?
+    var selectedView = SelectionView()
     
     
     override func viewDidLoad() {
@@ -102,7 +103,18 @@ class SketchViewController: UIViewController, PKCanvasViewDelegate,
             //print(dragStartPoint)
         }
         
-        // TODO: draw a selection rectangle during gesture
+        if gr.state == .changed {
+            
+            if let startPoint = dragStartPoint {
+                
+                if selectedView.superview == nil {
+                    canvasView.addSubview(selectedView)
+                }
+                
+                selectedView.frame = CGRect(from: startPoint,
+                                            to: gr.location(in: canvasView))
+            }
+        }
         
         if gr.state == .failed {
             clearExportSelection()
@@ -133,6 +145,9 @@ class SketchViewController: UIViewController, PKCanvasViewDelegate,
         dragStartPoint = nil
         dragEndPoint = nil
         selectedRect = nil
+        
+        selectedView.frame = .zero
+        selectedView.removeFromSuperview()
     }
     
     
