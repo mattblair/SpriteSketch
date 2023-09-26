@@ -31,7 +31,7 @@ For my use case, it's much easier to use the pencil to draw and my finger to cro
 
 ## Roadmap
 
-This is primarily an attempt to take PencilKit for a spin, and scratch some of my own itches for a few unreleased projects. Given that, I hestiate to make too many promises.
+This is primarily a proof-of-concept app to take PencilKit for a spin, and scratch some of my own itches for a few unreleased projects. Given that, I hestiate to make too many promises.
 
 Some possible features I may add, as needed:
 
@@ -42,6 +42,7 @@ Some possible features I may add, as needed:
 * Gallery to review saved images
 * Group images into projects/tags
 * Toggle background transparency
+* Share directly from the app
 
 
 ## Additional Resources

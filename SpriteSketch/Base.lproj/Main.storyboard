@@ -93,6 +93,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="handleNameChange:" destination="imE-xi-HDN" eventType="editingChanged" id="eYi-6t-TtS"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Count" borderStyle="roundedRect" placeholder="Name" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FHj-aF-eQO">
                                         <rect key="frame" x="300" y="0.0" width="60" height="34"/>
@@ -126,11 +129,17 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="handleWidthChange:" destination="imE-xi-HDN" eventType="editingChanged" id="uW6-ea-cYf"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nlF-Wq-TEM">
                                         <rect key="frame" x="90" y="0.0" width="60" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="handleHeightChange:" destination="imE-xi-HDN" eventType="editingChanged" id="0Sh-jb-lFh"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
